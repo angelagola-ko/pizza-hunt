@@ -9,7 +9,7 @@ const commentController = {
             console.log(_id)
             return Pizza.findOneAndUpdate (
                 { _id: params.pizzaId },
-                { $push: {comments: _id } },
+                { $push: { comments: _id } },
                 { new: true }
             );
         })

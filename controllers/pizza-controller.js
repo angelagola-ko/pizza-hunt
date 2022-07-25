@@ -12,7 +12,8 @@ const pizzaController = {
         .sort({ _id: -1 })
         .then(dbPizzaData => res.json(dbPizzaData))
         .catch(err => {
-            res.status(400).json(err);
+            console.log(err);
+            res.sendStatus(400).json(err);
         });
     },
     //get one pizza by id

@@ -35,13 +35,13 @@ const PizzaSchema = new Schema ({
 }
 );
 
-//Create the Pizza model using the Pizza Schema
-const Pizza = model('Pizza', PizzaSchema);
 
 //get total count of comments and replies on retrieval
 PizzaSchema.virtual('commentCount').get(function() {
     return this.comments.length;
 });
+//Create the Pizza model using the Pizza Schema
+const Pizza = model('Pizza', PizzaSchema);
 
 //export the Pizza model
 module.exports = Pizza;
