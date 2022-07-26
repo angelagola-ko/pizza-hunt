@@ -18,22 +18,23 @@ const ReplySchema = new Schema ({
         type: Date,
         default: Date.now,
         get: createdAtVal => dateFormat(createdAtVal)
-    },
+    }
 },
 {
     toJSON: {
-        getters:true
+        getters: true
     }
 }
 );
-const CommentSchema = new Schema ({
+const CommentSchema = new Schema (
+    {
     writtenBy: {
         type: String
     },
     commentBody: {
         type: String
     },
-    CreatedAt: {
+    createdAt: {
         type: Date,
         default: Date.now,
         get: createdAtVal => dateFormat(createdAtVal)
